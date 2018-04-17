@@ -1,4 +1,5 @@
 #include "dog.h"
+#include <QDebug>
 
 // constructor for dog
 Dog::Dog(QString name, QString type, double price, double weight,
@@ -13,6 +14,7 @@ Dog::Dog(QString name, QString type, double price, double weight,
 Dog::~Dog(){}
 //getter for name
 QString Dog::GetName() const{
+    qDebug() << "inside dog get name";
     return this->_name;
 }
 //getter for type

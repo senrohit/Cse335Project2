@@ -4,6 +4,7 @@
 #include "loadbutton.h"
 #include "petbuilder.h"
 #include "csvparser.h"
+#include <QDebug>
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
@@ -16,8 +17,18 @@ MainWindow::MainWindow(QWidget *parent) :
     connect(ui->loadDB,SIGNAL(clicked()),ui->loadDB,SLOT(buildMyDatabase()));
     connect(ui->loadDB,SIGNAL(iChanged(QObject*)),this,SLOT(actByYourChange(QObject*)));
 
+    PetBuilder pb;
     CSVParser parser;
+    parser.setBuilder(&pb);
     parser.ParsePet("Pets.csv");
+    mPets = pb.getPets();
+    //pritning out size works
+    //qDebug() << mPets.size();
+//    for(int i = 0; i < mPets.size(); i++){
+//        qDebug() << i;
+        //printing out Name breaks program
+//        qDebug() << mPets[i]->GetName();
+//    }
 }
 
 MainWindow::~MainWindow()

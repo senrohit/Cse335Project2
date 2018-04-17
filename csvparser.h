@@ -16,27 +16,28 @@ public:
         if (!petFile.open(QIODevice::ReadOnly)) {
             qDebug() << petFile.errorString();
         }
-        QStringList list;
+
         while (!petFile.atEnd()) {
+            QStringList list;
             QString line = petFile.readLine();
             line.replace("\r\n", "");
             list.append(line.split(','));
-//            QString PetType = list[0];
+            QString PetType = list[0];
 
-//            if (PetType == "Dog"){
-//                mBuilder->addDog(list);
-//            }
-//            else if (PetType == "Cat"){
-//                mBuilder->addCat(list);
-//            }
-//            else if (PetType == "Bird"){
-//                mBuilder->addCat(list);
-//            }
-//            else if (PetType == "Fish"){
-//                mBuilder->addFish(list);
-//            }
+            if (PetType == "Dog"){
+                mBuilder->addDog(list);
+            }
+            else if (PetType == "Cat"){
+                mBuilder->addCat(list);
+            }
+            else if (PetType == "Bird"){
+                mBuilder->addCat(list);
+            }
+            else if (PetType == "Fish"){
+                mBuilder->addFish(list);
+            }
         }
-        qDebug() << list;
+        //qDebug() << list;
     }
 
 protected:

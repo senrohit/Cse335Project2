@@ -2,6 +2,8 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include <QVector>
+#include "pet.h"
 
 namespace Ui {
 class MainWindow;
@@ -19,6 +21,7 @@ public slots:
 
 private:
     Ui::MainWindow *ui;
+    QVector<Pet*> mPets;
 };
 
 #endif // MAINWINDOW_H
