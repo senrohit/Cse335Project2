@@ -27,12 +27,31 @@ SOURCES += \
         main.cpp \
         mainwindow.cpp \
     separatepettable.cpp \
-    loadbutton.cpp
+    loadbutton.cpp \
+    bird.cpp \
+    builder.cpp \
+    bundle.cpp \
+    cat.cpp \
+    csvparser.cpp \
+    dog.cpp \
+    fish.cpp \
+    pet.cpp \
+    petbuilder.cpp
 
 HEADERS += \
         mainwindow.h \
     separatepettable.h \
-    loadbutton.h
+    loadbutton.h \
+    ../Cse335Project2 - Copy/bird.h \
+    bird.h \
+    builder.h \
+    bundle.h \
+    cat.h \
+    csvparser.h \
+    dog.h \
+    fish.h \
+    pet.h \
+    petbuilder.h
 
 FORMS += \
         mainwindow.ui

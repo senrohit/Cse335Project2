@@ -2,7 +2,8 @@
 #include "ui_mainwindow.h"
 #include "separatepettable.h"
 #include "loadbutton.h"
-
+#include "petbuilder.h"
+#include "csvparser.h"
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
@@ -14,6 +15,9 @@ MainWindow::MainWindow(QWidget *parent) :
     // connecting load db button with the table
     connect(ui->loadDB,SIGNAL(clicked()),ui->loadDB,SLOT(buildMyDatabase()));
     connect(ui->loadDB,SIGNAL(iChanged(QObject*)),this,SLOT(actByYourChange(QObject*)));
+
+    CSVParser parser;
+    parser.ParsePet("Pets.csv");
 }
 
 MainWindow::~MainWindow()
