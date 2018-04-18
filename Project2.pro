@@ -36,7 +36,8 @@ SOURCES += \
     dog.cpp \
     fish.cpp \
     pet.cpp \
-    petbuilder.cpp
+    petbuilder.cpp \
+    bundlebuilder.cpp
 
 HEADERS += \
         mainwindow.h \
@@ -51,7 +52,8 @@ HEADERS += \
     dog.h \
     fish.h \
     pet.h \
-    petbuilder.h
+    petbuilder.h \
+    bundlebuilder.h
 
 FORMS += \
         mainwindow.ui

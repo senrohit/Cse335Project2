@@ -20,9 +20,9 @@ public:
     //getter for type
     virtual QString GetType() const;
     //getter for weight
-     virtual unsigned int GetWeight() const;
+     virtual double GetWeight() const;
      //getter for price
-    virtual float GetPrice() const;
+    virtual double GetPrice() const;
     // getter for category
     QString GetWaterType() const;
 };

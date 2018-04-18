@@ -18,11 +18,11 @@ QString Bird::GetName() const{
 QString Bird::GetType() const{
     return this->_type;
 }
-unsigned int Bird::GetWeight() const{
+double Bird::GetWeight() const{
     return this->_weight;
 }
  //getter for price
-float Bird::GetPrice() const{
+double Bird::GetPrice() const{
     return this->_price;
 }
 // getter for nocturnal

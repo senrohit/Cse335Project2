@@ -5,6 +5,9 @@
 #include "petbuilder.h"
 #include "csvparser.h"
 #include <QDebug>
+#include "pet.h"
+#include "dog.h"
+#include "bundlebuilder.h"
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
@@ -17,18 +20,20 @@ MainWindow::MainWindow(QWidget *parent) :
     connect(ui->loadDB,SIGNAL(clicked()),ui->loadDB,SLOT(buildMyDatabase()));
     connect(ui->loadDB,SIGNAL(iChanged(QObject*)),this,SLOT(actByYourChange(QObject*)));
 
-    PetBuilder pb;
+    //parser to read in csv files
     CSVParser parser;
+
+    //create pet builder, set the builder in parser, parse file and then grab vector of pets
+    PetBuilder pb;
     parser.setBuilder(&pb);
     parser.ParsePet("Pets.csv");
     mPets = pb.getPets();
-    //pritning out size works
-    //qDebug() << mPets.size();
-//    for(int i = 0; i < mPets.size(); i++){
-//        qDebug() << i;
-        //printing out Name breaks program
-//        qDebug() << mPets[i]->GetName();
-//    }
+
+    //create bundle builder, set the builder in parser, parse file and then grab vector of bundles
+    BundleBuilder bb(mPets);
+    parser.setBuilder(&bb);
+    parser.ParseBundle("Bundles.csv");
+    mBundles = bb.getPets();
 }
 
 MainWindow::~MainWindow()

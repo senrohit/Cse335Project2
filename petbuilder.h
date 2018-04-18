@@ -4,17 +4,19 @@
 #include <QVector>
 #include "pet.h"
 #include "builder.h"
+#include "bundle.h"
 
 class PetBuilder:public Builder
 {
 public:
     PetBuilder();
+    ~PetBuilder();
     virtual void addDog(QStringList);
     virtual void addCat(QStringList);
     virtual void addFish(QStringList);
     virtual void addBird(QStringList);
     virtual void addBundle(QStringList);
-    virtual QVector<Pet*> getPets();
+    virtual QVector<Pet*> getPets()const;
 
 protected:
     QVector<Pet*> mPets;

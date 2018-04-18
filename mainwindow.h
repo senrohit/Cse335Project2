@@ -22,6 +22,7 @@ public slots:
 private:
     Ui::MainWindow *ui;
     QVector<Pet*> mPets;
+    QVector<Pet*> mBundles;
 };
 
 #endif // MAINWINDOW_H

@@ -20,11 +20,11 @@ QString Cat::GetType() const{
     return this->_type;
 }
 //getter for weight
-unsigned int Cat::GetWeight() const{
+double Cat::GetWeight() const{
     return this->_weight;
 }
 //getter for price
-float Cat::GetPrice() const{
+double Cat::GetPrice() const{
     return this->_price;
 }
 // getter for fluffy

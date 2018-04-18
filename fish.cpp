@@ -20,11 +20,11 @@ QString Fish::GetType() const{
     return this->_type;
 }
 //getter for weight
-unsigned int Fish::GetWeight() const{
+double Fish::GetWeight() const{
     return this->_weight;
 }
  //getter for price
-float Fish::GetPrice() const{
+double Fish::GetPrice() const{
     return this->_price;
 }
 // getter for category
