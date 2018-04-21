@@ -35,6 +35,7 @@ QString Fish::GetWaterType() const{
 //visitor hook
 void Fish::Accept(Visitor* v) {
     v->VisitFish(this);
+}
 // getter for animal type
 QString Fish::GetAnimal() const{
     return this->mAnimal;

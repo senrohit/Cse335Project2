@@ -33,6 +33,8 @@ bool Bird::GetNocturnal() const{
 //visitor hook
 void Bird::Accept(Visitor* v) {
     v->VisitBird(this);
+}
+// getter for animal type
 QString Bird::GetAnimal() const{
     return this->mAnimal;
 }

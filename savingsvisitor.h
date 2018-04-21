@@ -2,6 +2,7 @@
 #define SAVINGSVISITOR_H
 
 #include "visitor.h"
+#include <QString>
 
 class SavingsVisitor : public Visitor
 {
@@ -11,11 +12,11 @@ public:
     virtual void VisitDog(Dog*);
     virtual void VisitFish(Fish*);
     virtual void VisitBundle(Bundle*);
-    double GetResult() const;
+    QString GetResult() const;
 
 protected:
-    double mSum;
-    double mDiscount;
+    double mSum = 0;
+    QString mDiscount;
 };
 
 #endif // SAVINGSVISITOR_H

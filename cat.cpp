@@ -35,6 +35,7 @@ bool Cat::GetFluffy() const{
 //visitor hook
 void Cat::Accept(Visitor* v) {
     v->VisitCat(this);
+}
 // getter for animal type
 QString Cat::GetAnimal() const{
     return this->mAnimal;

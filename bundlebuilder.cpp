@@ -26,8 +26,6 @@ void BundleBuilder::addBundle(QStringList l){
     //get attributes for bundle from list and set up variables that will be used
     QString name = l[0];
     double price = l[1].toDouble();
-    QString discount;
-    double sum;
 
     QVector<Pet*> petsToAdd;
     //find pets to add to bundle
@@ -39,7 +37,6 @@ void BundleBuilder::addBundle(QStringList l){
             //found pet, add to vector of pets to add and add pet price to sum
             if (mAllPets[j]->GetName() == currName){
                 petsToAdd.append(mAllPets[j]);
-                sum += mAllPets[j]->GetPrice();
                 found = true;
             }
             //pet not found end loop
@@ -49,15 +46,8 @@ void BundleBuilder::addBundle(QStringList l){
         }
     }
 
-    //calculate discount by finding difference between sum of pets in bundle and bundle price, then divide by sum
-    double diff = sum - price;
-    double percent_d = diff/sum;
-    percent_d *= 100;
-    QString percent_s = QString::number((int)percent_d);
-    discount = percent_s + "%";
-
     //create new bundle and add it to vector of bundles
-    Bundle* newBundle = new Bundle(name, price, discount, petsToAdd);
+    Bundle* newBundle = new Bundle(name, price, petsToAdd);
     mBundles.append(newBundle);
 }
 

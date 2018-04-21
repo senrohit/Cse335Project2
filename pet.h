@@ -28,6 +28,7 @@ public:
     virtual double GetPrice() const = 0;
     virtual QString GetAnimal() const=0;
     virtual QVector<Pet*> GetPets() const;
+    virtual void SetDiscount(QString);
     virtual QString GetDiscount() const;
     virtual void Accept(Visitor*)=0;
 };

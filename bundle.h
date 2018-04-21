@@ -6,7 +6,7 @@
 class Bundle : public Pet
 {
 public:
-    Bundle(QString n, double p, QString d, QVector<Pet*>);
+    Bundle(QString n, double p, QVector<Pet*>);
     virtual QString GetName() const;
     virtual QString GetType() const;
     virtual double GetWeight() const;

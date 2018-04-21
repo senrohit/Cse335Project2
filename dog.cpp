@@ -36,6 +36,7 @@ QString Dog::GetCategory() const{
 //visitor hook
 void Dog::Accept(Visitor* v) {
     v->VisitDog(this);
+}
 // getter for animal type
 QString Dog::GetAnimal() const{
     return this->mAnimal;

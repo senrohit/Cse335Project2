@@ -1,11 +1,11 @@
 #include "bundle.h"
 
 
-Bundle::Bundle(QString n, double p, QString d, QVector<Pet*> v)
+Bundle::Bundle(QString n, double p, QVector<Pet*> v)
 {
     _name = n;
     _price = p;
-    mDiscount = d;
+    mDiscount = "";
     mPets = v;
 }
 
