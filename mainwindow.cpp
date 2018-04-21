@@ -14,8 +14,6 @@ MainWindow::MainWindow(QWidget *parent) :
     ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
-    // base table
-    //SeparatePetTable *petTable = new SeparatePetTable(parent);
     // connecting load db button with the table
     connect(ui->loadDB,SIGNAL(clicked()),ui->loadDB,SLOT(buildMyDatabase()));
     connect(ui->loadDB,SIGNAL(iChanged(QObject*)),this,SLOT(actByYourChange(QObject*)));
@@ -43,15 +41,19 @@ MainWindow::~MainWindow()
 
 void MainWindow::actByYourChange(QObject* senderObj){
     if (senderObj==ui->loadDB){
-        QStandardItem *firstRow = new QStandardItem(QString("ONE"));
-        QStandardItem *secondRow = new QStandardItem(QString("TWO"));
-        QStandardItem *thirdRow = new QStandardItem(QString("THREE"));
-        QStandardItem *fourthRow = new QStandardItem(QString("FOUR"));
-        ui->petView->makeRow(0,firstRow);
-        ui->petView->makeRow(1,secondRow);
-        ui->petView->makeRow(2,thirdRow);
-        ui->petView->makeRow(3,fourthRow);
+        for(int i = 0;i<mPets.size();i++){
+            QStandardItem *petRowName = new QStandardItem(mPets[i]->GetName());
+            QStandardItem *petRowAnimal = new QStandardItem(mPets[i]->GetAnimal());
+            QStandardItem *petRowPrice = new QStandardItem(mPets[i]->GetPrice());
+            QStandardItem *petRowType = new QStandardItem(mPets[i]->GetType());
+            ui->petView->makeRow(i,0,petRowName);
+            ui->petView->makeRow(i,1,petRowAnimal);
+            ui->petView->makeRow(i,2,petRowPrice);
+            ui->petView->makeRow(i,3,petRowType);
+        }
+        // stretches the table to fit the content
         ui->petView->setFixedHeight(115);
+        // disable the load database button
         ui->loadDB->setEnabled(false);
     }
 

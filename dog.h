@@ -24,6 +24,8 @@ public:
     virtual double GetPrice() const;
     // getter for category
     QString GetCategory() const;
+    // getter for animal type
+    virtual QString GetAnimal() const;
 };
 
 #endif // DOG_H

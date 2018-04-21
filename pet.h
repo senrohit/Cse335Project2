@@ -14,6 +14,7 @@ protected:
     double _price;
     QVector<Pet*> mPets;
     QString mDiscount;
+    QString mAnimal;
 
 public:
     virtual ~Pet();
@@ -23,6 +24,7 @@ public:
     virtual QString GetType() const = 0;
     virtual double GetWeight() const = 0;
     virtual double GetPrice() const = 0;
+    virtual QString GetAnimal() const=0;
     virtual QVector<Pet*> GetPets() const;
     virtual QString GetDiscount() const;
 };

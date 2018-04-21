@@ -22,6 +22,8 @@ public:
     virtual double GetPrice() const;
     // getter for nocturnal
     bool GetNocturnal() const;
+    // getter for animal type
+    virtual QString GetAnimal() const;
 };
 
 #endif // BIRD_H

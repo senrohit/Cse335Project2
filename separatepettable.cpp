@@ -1,8 +1,7 @@
 #include "separatepettable.h"
 
-void SeparatePetTable::makeRow(int i, QStandardItem* obj){
-    model->setItem(i,0,obj);
+void SeparatePetTable::makeRow(int i, int j, QStandardItem* obj){
+    model->setItem(i,j,obj);
     this->setModel(model);
     this->resizeRowsToContents();
-
 }

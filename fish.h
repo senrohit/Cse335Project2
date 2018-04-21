@@ -25,5 +25,7 @@ public:
     virtual double GetPrice() const;
     // getter for category
     QString GetWaterType() const;
+    // getter for animal type
+    virtual QString GetAnimal() const;
 };
 #endif // FISH_H

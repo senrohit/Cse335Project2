@@ -9,6 +9,7 @@ Dog::Dog(QString name, QString type, double price, double weight,
     _weight = weight;
     _price = price;
     _category = category;
+    mAnimal = "Dog";
 }
 // destructor
 Dog::~Dog(){}
@@ -31,4 +32,8 @@ double Dog::GetPrice() const{
 // getter for category
 QString Dog::GetCategory() const{
     return this->_category;
+}
+// getter for animal type
+QString Dog::GetAnimal() const{
+    return this->mAnimal;
 }

@@ -8,6 +8,7 @@ Bird::Bird(QString name, QString type, double price, double weight,
     _weight = weight;
     _price = price;
     _nocturnal = nocturnal;
+    mAnimal = "Bird";
 }
 Bird::~Bird(){}
 //getter for name
@@ -28,4 +29,8 @@ double Bird::GetPrice() const{
 // getter for nocturnal
 bool Bird::GetNocturnal() const{
     return this->_nocturnal;
+}
+// getter for animal type
+QString Bird::GetAnimal() const{
+    return this->mAnimal;
 }

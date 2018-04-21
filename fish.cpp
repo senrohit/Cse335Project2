@@ -8,6 +8,7 @@ Fish::Fish(QString name, QString type, double price, double weight,
     _weight = weight;
     _price = price;
     _watertype = watertype;
+    mAnimal = "Fish";
 }
 // destructor
 Fish::~Fish(){}
@@ -30,4 +31,8 @@ double Fish::GetPrice() const{
 // getter for category
 QString Fish::GetWaterType() const{
     return this->_watertype;
+}
+// getter for animal type
+QString Fish::GetAnimal() const{
+    return this->mAnimal;
 }

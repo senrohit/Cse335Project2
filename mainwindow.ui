@@ -47,6 +47,12 @@
      <height>22</height>
     </rect>
    </property>
+   <widget class="QMenu" name="menuPet_Database">
+    <property name="title">
+     <string>Pet Database</string>
+    </property>
+   </widget>
+   <addaction name="menuPet_Database"/>
   </widget>
   <widget class="QToolBar" name="mainToolBar">
    <attribute name="toolBarArea">

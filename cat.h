@@ -24,6 +24,8 @@ public:
     virtual double GetPrice() const;
     // getter for fluffy
     bool GetFluffy() const;
+    // getter for animal type
+    virtual QString GetAnimal() const;
 };
 
 #endif // CAT_H

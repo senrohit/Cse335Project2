@@ -27,7 +27,7 @@ public:
         this->verticalHeader()->hide();
         this->setShowGrid(false);
     }
-    void makeRow(int,QStandardItem*);
+    void makeRow(int,int,QStandardItem*);
 private:
     QStandardItemModel *model;
 };
