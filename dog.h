@@ -24,6 +24,7 @@ public:
     virtual double GetPrice() const;
     // getter for category
     QString GetCategory() const;
+    virtual void Accept(Visitor*);
 };
 
 #endif // DOG_H

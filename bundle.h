@@ -11,6 +11,7 @@ public:
     virtual QString GetType() const;
     virtual double GetWeight() const;
     virtual double GetPrice() const;
+    virtual void Accept(Visitor*);
 
 protected:
 

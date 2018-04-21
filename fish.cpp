@@ -31,3 +31,7 @@ double Fish::GetPrice() const{
 QString Fish::GetWaterType() const{
     return this->_watertype;
 }
+//visitor hook
+void Fish::Accept(Visitor* v) {
+    v->VisitFish(this);
+}

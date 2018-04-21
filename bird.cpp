@@ -29,3 +29,7 @@ double Bird::GetPrice() const{
 bool Bird::GetNocturnal() const{
     return this->_nocturnal;
 }
+//visitor hook
+void Bird::Accept(Visitor* v) {
+    v->VisitBird(this);
+}

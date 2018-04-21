@@ -4,6 +4,8 @@
 #include <QString>
 #include <QVector>
 
+#include "visitor.h"
+
 // base class Pet
 class Pet{
 protected:
@@ -25,6 +27,7 @@ public:
     virtual double GetPrice() const = 0;
     virtual QVector<Pet*> GetPets() const;
     virtual QString GetDiscount() const;
+    virtual void Accept(Visitor*)=0;
 };
 
 #endif // PET_H

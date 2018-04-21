@@ -31,3 +31,7 @@ double Cat::GetPrice() const{
 bool Cat::GetFluffy() const{
     return this->_fluffy;
 }
+//visitor hook
+void Cat::Accept(Visitor* v) {
+    v->VisitCat(this);
+}

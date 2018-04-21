@@ -32,3 +32,7 @@ double Dog::GetPrice() const{
 QString Dog::GetCategory() const{
     return this->_category;
 }
+//visitor hook
+void Dog::Accept(Visitor* v) {
+    v->VisitDog(this);
+}

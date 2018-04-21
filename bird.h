@@ -22,6 +22,7 @@ public:
     virtual double GetPrice() const;
     // getter for nocturnal
     bool GetNocturnal() const;
+    virtual void Accept(Visitor*);
 };
 
 #endif // BIRD_H

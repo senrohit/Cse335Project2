@@ -24,6 +24,7 @@ public:
     virtual double GetPrice() const;
     // getter for fluffy
     bool GetFluffy() const;
+    virtual void Accept(Visitor*);
 };
 
 #endif // CAT_H

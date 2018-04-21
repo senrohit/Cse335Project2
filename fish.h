@@ -5,7 +5,7 @@
 
 class Fish:public Pet{
 protected:
-    // special data member only for dog
+    // special data member only for fish
     QString _watertype;
 
 
@@ -25,5 +25,6 @@ public:
     virtual double GetPrice() const;
     // getter for category
     QString GetWaterType() const;
+    virtual void Accept(Visitor*);
 };
 #endif // FISH_H
