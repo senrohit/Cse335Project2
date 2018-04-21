@@ -8,6 +8,7 @@ Cat::Cat(QString name, QString type, double price, double weight,
     _weight = weight;
     _price = price;
     _fluffy = fluffy;
+    mAnimal = "Cat";
 }
 //Destructor
 Cat::~Cat(){}
@@ -34,4 +35,7 @@ bool Cat::GetFluffy() const{
 //visitor hook
 void Cat::Accept(Visitor* v) {
     v->VisitCat(this);
+// getter for animal type
+QString Cat::GetAnimal() const{
+    return this->mAnimal;
 }

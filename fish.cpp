@@ -8,6 +8,7 @@ Fish::Fish(QString name, QString type, double price, double weight,
     _weight = weight;
     _price = price;
     _watertype = watertype;
+    mAnimal = "Fish";
 }
 // destructor
 Fish::~Fish(){}
@@ -34,4 +35,7 @@ QString Fish::GetWaterType() const{
 //visitor hook
 void Fish::Accept(Visitor* v) {
     v->VisitFish(this);
+// getter for animal type
+QString Fish::GetAnimal() const{
+    return this->mAnimal;
 }

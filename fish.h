@@ -26,5 +26,7 @@ public:
     // getter for category
     QString GetWaterType() const;
     virtual void Accept(Visitor*);
+    // getter for animal type
+    virtual QString GetAnimal() const;
 };
 #endif // FISH_H

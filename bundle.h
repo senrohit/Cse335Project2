@@ -12,6 +12,7 @@ public:
     virtual double GetWeight() const;
     virtual double GetPrice() const;
     virtual void Accept(Visitor*);
+    virtual QString GetAnimal() const;
 
 protected:
 

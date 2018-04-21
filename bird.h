@@ -23,6 +23,8 @@ public:
     // getter for nocturnal
     bool GetNocturnal() const;
     virtual void Accept(Visitor*);
+    // getter for animal type
+    virtual QString GetAnimal() const;
 };
 
 #endif // BIRD_H

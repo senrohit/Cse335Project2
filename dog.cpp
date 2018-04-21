@@ -9,6 +9,7 @@ Dog::Dog(QString name, QString type, double price, double weight,
     _weight = weight;
     _price = price;
     _category = category;
+    mAnimal = "Dog";
 }
 // destructor
 Dog::~Dog(){}
@@ -35,4 +36,7 @@ QString Dog::GetCategory() const{
 //visitor hook
 void Dog::Accept(Visitor* v) {
     v->VisitDog(this);
+// getter for animal type
+QString Dog::GetAnimal() const{
+    return this->mAnimal;
 }

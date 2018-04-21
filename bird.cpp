@@ -8,6 +8,7 @@ Bird::Bird(QString name, QString type, double price, double weight,
     _weight = weight;
     _price = price;
     _nocturnal = nocturnal;
+    mAnimal = "Bird";
 }
 Bird::~Bird(){}
 //getter for name
@@ -32,4 +33,6 @@ bool Bird::GetNocturnal() const{
 //visitor hook
 void Bird::Accept(Visitor* v) {
     v->VisitBird(this);
+QString Bird::GetAnimal() const{
+    return this->mAnimal;
 }

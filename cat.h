@@ -25,6 +25,8 @@ public:
     // getter for fluffy
     bool GetFluffy() const;
     virtual void Accept(Visitor*);
+    // getter for animal type
+    virtual QString GetAnimal() const;
 };
 
 #endif // CAT_H

@@ -25,6 +25,8 @@ public:
     // getter for category
     QString GetCategory() const;
     virtual void Accept(Visitor*);
+    // getter for animal type
+    virtual QString GetAnimal() const;
 };
 
 #endif // DOG_H

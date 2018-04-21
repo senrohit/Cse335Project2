@@ -17,3 +17,4 @@ double Bundle::GetPrice() const{return _price;}
 void Bundle::Accept(Visitor* v){
     v->VisitBundle(this);
 }
+QString Bundle::GetAnimal() const {return "";}
