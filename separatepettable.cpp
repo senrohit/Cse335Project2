@@ -5,3 +5,7 @@ void SeparatePetTable::makeRow(int i, int j, QStandardItem* obj){
     this->setModel(model);
     this->resizeRowsToContents();
 }
+
+QStandardItemModel* SeparatePetTable::getModel(){
+    return this->model;
+}

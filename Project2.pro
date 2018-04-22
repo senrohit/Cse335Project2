@@ -39,7 +39,10 @@ SOURCES += \
     petbuilder.cpp \
     bundlebuilder.cpp \
     visitor.cpp \
-    savingsvisitor.cpp
+    savingsvisitor.cpp \
+    petbundletableview.cpp \
+    shoppingcart.cpp \
+    shoppingcarttableview.cpp
 
 HEADERS += \
         mainwindow.h \
@@ -57,7 +60,11 @@ HEADERS += \
     petbuilder.h \
     bundlebuilder.h \
     visitor.h \
-    savingsvisitor.h
+    savingsvisitor.h \
+    petbundletableview.h \
+    shoppingcart.h \
+    shoppingcarttableview.h
 
 FORMS += \
-        mainwindow.ui
+        mainwindow.ui \
+    shoppingcart.ui

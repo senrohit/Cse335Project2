@@ -14,6 +14,7 @@ public:
     // Separate Pet Table Constructor
     SeparatePetTable(QWidget* qw):QTableView(qw){
         model = new QStandardItemModel(0,4,this);
+        this->setSelectionBehavior(QAbstractItemView::SelectRows);
         this->setEditTriggers(QAbstractItemView::NoEditTriggers);
         this->setFixedHeight(23);
         // setting header data
@@ -26,8 +27,10 @@ public:
         this->horizontalHeader()->setSectionResizeMode(3,QHeaderView::Stretch);
         this->verticalHeader()->hide();
         this->setShowGrid(false);
+
     }
     void makeRow(int,int,QStandardItem*);
+    QStandardItemModel* getModel();
 private:
     QStandardItemModel *model;
 };

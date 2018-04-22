@@ -7,19 +7,19 @@
     <x>0</x>
     <y>0</y>
     <width>612</width>
-    <height>321</height>
+    <height>366</height>
    </rect>
   </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>Pet Database</string>
   </property>
   <widget class="QWidget" name="centralWidget">
    <widget class="LoadButton" name="loadDB">
     <property name="geometry">
      <rect>
-      <x>10</x>
-      <y>210</y>
-      <width>113</width>
+      <x>20</x>
+      <y>270</y>
+      <width>121</width>
       <height>32</height>
      </rect>
     </property>
@@ -35,6 +35,42 @@
       <width>591</width>
       <height>31</height>
      </rect>
+    </property>
+   </widget>
+   <widget class="PetBundleTableView" name="bundleView">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>170</y>
+      <width>591</width>
+      <height>31</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="addCart">
+    <property name="geometry">
+     <rect>
+      <x>240</x>
+      <y>270</y>
+      <width>131</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Add to Cart</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="show_cart">
+    <property name="geometry">
+     <rect>
+      <x>459</x>
+      <y>270</y>
+      <width>131</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Show Cart</string>
     </property>
    </widget>
   </widget>
@@ -75,6 +111,11 @@
    <class>LoadButton</class>
    <extends>QPushButton</extends>
    <header location="global">loadbutton.h</header>
+  </customwidget>
+  <customwidget>
+   <class>PetBundleTableView</class>
+   <extends>QTableView</extends>
+   <header location="global">petbundletableview.h</header>
   </customwidget>
  </customwidgets>
  <resources/>

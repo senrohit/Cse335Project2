@@ -4,6 +4,7 @@
 #include <QMainWindow>
 #include <QVector>
 #include "pet.h"
+#include "shoppingcart.h"
 
 namespace Ui {
 class MainWindow;
@@ -19,8 +20,14 @@ public:
 public slots:
     void actByYourChange(QObject*);
 
+private slots:
+    void on_show_cart_clicked();
+
+    void on_addCart_clicked();
+
 private:
     Ui::MainWindow *ui;
+    ShoppingCart* observerCart;
     QVector<Pet*> mPets;
     QVector<Pet*> mBundles;
 };
